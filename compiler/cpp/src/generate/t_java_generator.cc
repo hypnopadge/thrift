@@ -3276,7 +3276,7 @@ void t_java_generator::generate_process_async_function(t_service* tservice, t_fu
     indent(f_service_) << "{" << endl;
     indent_up();
     indent(f_service_) << "msgType = org.apache.thrift.protocol.TMessageType.EXCEPTION;" << endl;
-    indent(f_service_) << "msg = (org.apache.thrift.TBase)new "
+    indent(f_service_) << "msg = (org.apache.thrift.TException)new "
                           "org.apache.thrift.TApplicationException(org.apache.thrift."
                           "TApplicationException.INTERNAL_ERROR, e.getMessage());" << endl;
     indent_down();
